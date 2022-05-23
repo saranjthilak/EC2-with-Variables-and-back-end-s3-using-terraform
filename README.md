@@ -17,3 +17,4 @@ Steps
 6. Set S3 backend using the already created S3 bucket for storing state file.
 
 7. Execute again and confirm state files are stored in S3 Bucket.
+
