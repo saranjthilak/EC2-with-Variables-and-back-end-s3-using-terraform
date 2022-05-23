@@ -1,4 +1,4 @@
-# EC2-with-Variables-and-back-end-s3-using-terraform
+# EC2 with backend S3 using Terraform
 
 A terraform module to set up remote state management with S3 backend for your account. It creates an AWS S3 bucket to store state files.
 
