@@ -3,14 +3,14 @@ A terraform module to set up remote state management with S3 backend for your ac
 
 Steps
 
-Creating an EC2 instnace using Terraform 
+1. Creating an EC2 instnace using Terraform 
 
-Variables.tf are created and default variables are added.
+2. Variables.tf are created and default variables are added.
 
-Override Variable using command line
+3. Override Variable using command line
 
-After Execution locate and delete statefile.
+4. After Execution locate and delete statefile.
 
-Set S3 backend for storing state file
+5. Set S3 backend for storing state file
 
-Execute again and confirm state files are stored in S3 Bucket
+6. Execute again and confirm state files are stored in S3 Bucket
