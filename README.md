@@ -1,8 +1,18 @@
-# EC2 with backend S3 for storing remote state files
 
-A terraform module to set up remote state management with S3 backend for your account. It creates an AWS S3 bucket to store state files.
+# Project Title
 
-Steps
+EC2 with backend S3 for storing remote state files
+
+
+## Installation
+
+1.Terraform.
+
+2.AWS CLI.
+
+3.Visual Studio Code (Any Text Editor)
+    
+## Roadmap
 
 1. Create an EC2 instnace.
 
@@ -18,9 +28,12 @@ Steps
 
 7. Execute again and confirm state files are stored in S3 Bucket.
 
-Usage
+## Deployment
 
-# provider block
+To deploy this project run below program in terraform
+
+```terraform
+  # provider block
 
 provider "aws" {
   
@@ -40,7 +53,6 @@ resource "aws_s3_bucket" "tf_state_bucket" {
 
 # resourse block for creating sample ec2 instance
 
-
 resource "aws_instance" "east1-server" {
   ami                    = var.image_id
   instance_type          = var.instance_type
@@ -50,3 +62,47 @@ resource "aws_instance" "east1-server" {
  
  }  
 }
+
+#variable.tf
+
+variable "instance_type"{
+
+  type     = string
+   default ="t2.micro"
+   
+}
+
+variable "name"{
+
+   type    = string
+   default ="Terraform_Sample_Server"
+
+}
+
+variable "image_id"{
+
+   type    = string
+   default ="ami-02e136e904f3da870"
+
+}
+
+```
+Once Executed delete the state file and create backend S3 with already created S3 bucket
+
+```terraform
+
+terraform {
+  
+
+   backend "s3" {
+    bucket = "bucket-to-store-state-files"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+    profile = "default" 
+  }
+}
+
+```
+Check the S3 bucket and confirm remote state file are generated.
+
+
