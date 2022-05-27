@@ -87,6 +87,13 @@ variable "image_id"{
 }
 
 ```
+Overriding with input variables
+
+terraform apply -var="name=my_sample_server"
+terraform apply -var="instance_type=my_t2.small"
+terraform apply -var="image_id=ami-0022f774911c1d690"
+
+
 Once Executed delete the state file and create backend S3 with already created S3 bucket
 
 ```terraform
