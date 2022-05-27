@@ -87,7 +87,7 @@ variable "image_id"{
 }
 
 ```
-Overriding with input variables
+Can  Override the given code with input variables as below
 
 terraform apply -var="name=my_sample_server"
 
