@@ -114,4 +114,6 @@ terraform {
 ```
 Check the S3 bucket and confirm remote state file are generated.
 
+![image](https://user-images.githubusercontent.com/94320118/170777066-bc06eb4b-d58b-4526-9fd8-0a49ca8386c3.png)
+
 
