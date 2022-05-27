@@ -91,7 +91,7 @@ Can  Override the given code with input variables as below
 
 terraform apply -var="name=my_sample_server"
 
-terraform apply -var="instance_type=my_t2.small"
+terraform apply -var="instance_type=t2.small"
 
 terraform apply -var="image_id=ami-0022f774911c1d690"
 
